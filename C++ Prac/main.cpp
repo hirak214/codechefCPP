@@ -1,15 +1,35 @@
 //
 //  main.cpp
-//  C++ Prac
+//  CodeChef
 //
-//  Created by Hirak Desai on 16/07/19.
-//  Copyright © 2019 Hirak Desai. All rights reserved.
+//  Created by Hirak Desai on 16/11/20.
 //
 
 #include <iostream>
+#include <algorithm>
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int t;
+    cin>>t;
+   
+        while (t--) {
+            int n, k, value;
+            cin>>n;
+            int arr[n];
+            for (int i = 0; i<n; i++) {
+                cin>>arr[i];
+            }
+            cin>>k;
+            value = arr[k-1];
+            sort(arr, arr+n);
+            for (int i = 0; i<n; i++) {
+                if (arr[i] == value) {
+                    cout<<i+1<<endl;
+                    break;
+                }
+            }
+        }
+   
     return 0;
 }
